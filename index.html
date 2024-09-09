@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mood Tracker</title>
+    <!-- Bootstrap CSS -->
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Chart.js for visualizations -->
+    <link href="https://cdn.jsdelivr.net/npm/chart.js@3.9.0/dist/chart.min.css" rel="stylesheet">
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+    <!-- Navigation Bar -->
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+        <a class="navbar-brand" href="#">Mood Tracker</a>
+    </nav>
+
+    <div class="container mt-5">
+        <!-- Mood Entry Form -->
+        <div class="row">
+            <div class="col-md-6">
+                <h3 class="mb-4">Record Your Mood</h3>
+                <form id="mood-form">
+                    <div class="form-group">
+                        <label for="mood">Mood</label>
+                        <select class="form-control" id="mood" required>
+                            <option value="happy">Happy</option>
+                            <option value="sad">Sad</option>
+                            <option value="angry">Angry</option>
+                            <option value="neutral">Neutral</option>
+                            <option value="anxious">Anxious</option>
+                        </select>
+                    </div>
+                    <div class="form-group">
+                        <label for="note">Notes</label>
+                        <textarea class="form-control" id="note" rows="3"></textarea>
+                    </div>
+                    <button type="submit" class="btn btn-primary">Add Entry</button>
+                </form>
+            </div>
+        </div>
+
+        <!-- Mood Entries and Reports -->
+        <div class="mt-5">
+            <h3 class="mb-4">Mood Entries</h3>
+            <ul class="list-group" id="mood-entries-list"></ul>
+
+            <div id="mood-charts" class="mt-5">
+                <h3 class="mb-4">Mood Trends</h3>
+                <canvas id="mood-chart" width="400" height="200"></canvas>
+            </div>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer class="footer bg-dark text-white py-3 mt-5">
+        <div class="container text-center">
+            <p class="mb-0">© 2024 Mood Tracker. All rights reserved.</p>
+            <p class="mb-0">Developed by Mujeeb Ur Rehman.</p>
+        </div>
+    </footer>
+
+    <!-- Bootstrap and jQuery JS -->
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <!-- Chart.js -->
+    <script src="https://cdn.jsdelivr.net/npm/chart.js@3.9.0/dist/chart.min.js"></script>
+    <!-- Custom JS -->
+    <script src="js/app.js"></script>
+</body>
+</html>
